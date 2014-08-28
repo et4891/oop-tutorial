@@ -1,9 +1,29 @@
 <?php 
 
-require 'Person.php';
+require 'Bird.php';
+require 'Pigeon.php';
+require 'Penguin.php';
 
-$person = new Person('John', 20);
+$bird = new Bird(true, 2);
 
-echo $person->sentence();
+//use the getLegCount method created in Bird.php
+echo $bird->getLegCount() . '<br>'; // returns 2 which is what we entered
+
+
+//pigeon class inherited what's in Bird.php
+$pigeon = new Pigeon(true, 2);
+
+if ($pigeon->canFly())
+{
+	echo 'Pigeon Can Fly <br>';
+}
+
+//penguin class inherited what's in Bird.php
+$penguin = new Penguin(false, 2);
+
+if (!$penguin->canFly())
+{
+	echo 'Penguin Cannot Fly';
+}
 
  ?>
