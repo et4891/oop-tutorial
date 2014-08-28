@@ -26,4 +26,12 @@ if (!$penguin->canFly())
 	echo 'Penguin Cannot Fly';
 }
 
+
+/*changed Bird's property/variable to protected and added a public foo() to Pigeon.php*/
+/*if Bird's property is set to private this will get an error*/
+echo '<br>';
+$penguin->foo();
+
+//can not access it directly if the property is set to protected or private in Bird class
+$penguin->legCount;
  ?>
